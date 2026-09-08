@@ -146,3 +146,16 @@ a,a:visited{color:var(--ink);text-decoration:none}
   .invoice-top{flex-direction:column}
   .receipt-preview{width:100%}
 }
+
+
+/* Linked appointment invoices and studio alerts */
+.appointment-history .booking-card[role="button"]{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;border:2px solid transparent}
+.appointment-history .booking-card[role="button"]:hover,.appointment-history .booking-card[role="button"]:focus{outline:none;transform:translateY(-2px);border-color:var(--amber);box-shadow:0 14px 32px rgba(80,43,30,.12)}
+.invoice-search{margin:20px 0 8px;max-width:560px}
+.invoice-order-note{margin:0 0 18px}
+.admin-head-actions{justify-content:flex-end;flex-wrap:wrap}
+#enableAdminAlerts{white-space:nowrap}
+@media(max-width:620px){
+  .admin-head-actions{width:100%;justify-content:stretch}
+  .admin-head-actions .btn{flex:1}
+}
