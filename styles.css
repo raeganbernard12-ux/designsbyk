@@ -48,3 +48,38 @@
 
 /* Service rules reminder */
 .service-rule-strip{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;margin:10px 0 16px;scrollbar-width:thin;scrollbar-color:#9a5a33 #f0dfc8}.service-rule-strip button{flex:0 0 auto;border:1px solid #d4b184;border-radius:999px;background:linear-gradient(145deg,#fff8e9,#f1ddc1);color:#51291e;padding:9px 13px;font-size:13px;font-weight:700;cursor:pointer;transition:transform .18s,box-shadow .18s}.service-rule-strip button:hover,.service-rule-strip button:focus-visible{transform:translateY(-2px);box-shadow:0 5px 12px #8b512633;outline:none}.service-rule-strip button:focus-visible{outline:3px solid #c57c3b;outline-offset:2px}.service-group.jump-highlight{animation:jumpGlow .9s ease-out}@keyframes jumpGlow{0%{filter:drop-shadow(0 0 0 #c57c3b00)}35%{filter:drop-shadow(0 0 10px #c57c3b99)}100%{filter:drop-shadow(0 0 0 #c57c3b00)}}.service-option{touch-action:manipulation}.service-option:focus-visible{outline:3px solid #c57c3b;outline-offset:2px}
+
+/* Portrait layout safety: keep every view and modal inside the phone viewport. */
+html,body{max-width:100%;overflow-x:hidden}
+main,#app{min-width:0;max-width:100%}
+.grid>* ,.service-group,.service-option,.card,.modal-box form,.actions>*{min-width:0}
+img,video,canvas,svg{max-width:100%;height:auto}
+input,textarea,select,button{min-width:0;max-width:100%}
+.field input,.field textarea,.field select{min-width:0;max-width:100%}
+.upload{min-width:0;max-width:100%;overflow:hidden}
+.upload input[type=file]{display:block;width:100%;max-width:100%;font-size:14px}
+.calendar{min-width:0;max-width:100%;overflow:hidden}
+.weekdays span,.month-grid>*{min-width:0}
+.day{min-width:0;overflow:hidden}
+.day small{overflow-wrap:anywhere;word-break:break-word;line-height:1.05}
+.modal{min-width:0;overflow-x:hidden}
+.modal-box{min-width:0;max-width:100%;overflow-x:hidden}
+.sms-compose{grid-template-columns:auto minmax(0,1fr) auto;min-width:0;max-width:100%}
+.sms-compose textarea{min-width:0;width:100%}
+@media(max-width:620px){
+  main{padding-left:12px;padding-right:12px}
+  .modal{padding:10px}
+  .modal-box{width:100%;margin:0 auto;padding:18px 14px;border-radius:22px}
+  .calendar-head{gap:6px}
+  .calendar-head h2{font-size:clamp(20px,6vw,27px);min-width:0;text-align:center}
+  .weekdays,.month-grid{gap:3px}
+  .day{aspect-ratio:auto;min-height:72px;padding:3px 1px}
+  .day b{font-size:clamp(15px,5vw,18px)}
+  .day small{font-size:7px}
+  .service-option{padding:12px 10px;gap:8px}
+  .service-option .grow{min-width:0}
+  .service-option strong,.service-option small{overflow-wrap:anywhere}
+  .price{white-space:nowrap}
+  .sms-bubble{max-width:92%;overflow-wrap:anywhere}
+  .attach-btn,.send-btn{flex:none}
+}
