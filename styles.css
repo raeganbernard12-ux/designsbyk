@@ -103,3 +103,5 @@ a,a:visited{color:var(--ink);text-decoration:none}
 .service-admin-list{display:grid;gap:18px}.service-admin-group{display:grid;gap:8px}.service-admin-group h3{margin:4px 0;font-family:"Playfair Display",serif;color:var(--brown);font-size:22px}.service-admin-row .btn[aria-label]{min-width:36px;padding:8px 10px;font-size:16px}
 
 .estimate-time{padding-left:14px;border-left:1px solid #d8b98f}.estimate-time strong{font-size:18px}@media(max-width:620px){.sticky-summary{gap:10px;align-items:center}.sticky-summary>span{min-width:0}.sticky-summary .estimate-time{padding-left:10px}.estimate-time strong{font-size:15px}.sticky-summary .btn{white-space:nowrap;padding:10px 12px}}
+
+.service-admin-row[draggable="true"]{cursor:grab}.service-admin-row.is-dragging{opacity:.45;border-style:dashed}.service-admin-row[draggable="true"]:active{cursor:grabbing}
