@@ -2,3 +2,5 @@
 
 .loyalty-card{background:linear-gradient(135deg,#4a271d,#6b3928);color:#fff;border:0;box-shadow:0 14px 28px rgba(61,31,22,.18)}
 .loyalty-card .eyebrow,.loyalty-card .muted{color:#f2dfc5}.loyalty-progress{height:10px;background:#8b5a43;border-radius:999px;overflow:hidden;margin-top:16px}.loyalty-progress span{display:block;height:100%;background:#e7ad68;border-radius:inherit;transition:width .3s ease}
+
+.loyalty-top{display:flex;align-items:center;gap:14px}.loyalty-badge{display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:#8b5138;font-size:26px;box-shadow:inset 0 1px rgba(255,255,255,.2)}.loyalty-note{display:block;margin-top:10px;color:#e9c9a7}.loyalty-card h2{margin:2px 0 0}
