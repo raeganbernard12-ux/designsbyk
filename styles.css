@@ -7,3 +7,13 @@
 .published-days-scroll::-webkit-scrollbar-track{background:#f1e4d2;border-radius:999px}
 .published-days-scroll::-webkit-scrollbar-thumb{background:var(--caramel);border-radius:999px}
 @media(min-width:760px){.published-days-scroll .day-group{flex-basis:330px}}
+
+/* Highlight-inspired published opening cards */
+.published-days-scroll .day-group{position:relative;overflow:hidden;background:linear-gradient(145deg,#2d1814,#5a2f22 68%,#7b4728);border:1px solid #bc7b3d;box-shadow:0 12px 24px #35181230}
+.published-days-scroll .day-group:before{content:"✦";position:absolute;right:16px;top:8px;color:#dca76a;font-size:22px;opacity:.8}
+.published-days-scroll .day-group-head{padding-bottom:10px;border-bottom:1px solid #e6b8753d}
+.published-days-scroll .day-group-head b{color:#fff3dc;font:600 21px "Playfair Display",serif}
+.published-days-scroll .day-group-head small{color:#e9bf88;font-weight:700}
+.published-days-scroll .slot-pill{background:#f2d6a8;color:#3a2018;box-shadow:0 3px 8px #2a130e22}
+.published-days-scroll .slot-pill small{color:#805235;font-weight:700}
+.published-days-scroll .trash{border-color:#d48972;background:#fff8ed;color:#843f39}
