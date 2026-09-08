@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#351d17" />
+  <meta name="description" content="Designs by K nail appointments, prices and client community." />
+  <title>Designs by K · Nail Appointments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="overrides.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand" data-view="home" aria-label="Home"><span>Designs by</span><b>K</b></button>
+    <button id="accountButton" class="login-pill" data-view="account">♡ <span>Account</span></button>
+  </header>
+  <main id="app" aria-live="polite"><div class="loader"><i></i><p>Preparing your nail space…</p></div></main>
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <button data-view="home" class="active"><span>⌂</span>Home</button>
+    <button data-view="schedule"><span>▦</span>Schedule</button>
+    <button data-view="prices"><span>▤</span>Prices</button>
+    <button data-view="policies"><span>☷</span>Policies</button>
+    <button data-view="account"><span>♙</span>Account</button>
+  </nav>
+  <div id="modal" class="modal" hidden></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
