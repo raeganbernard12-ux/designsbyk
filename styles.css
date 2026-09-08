@@ -83,3 +83,17 @@ input,textarea,select,button{min-width:0;max-width:100%}
   .sms-bubble{max-width:92%;overflow-wrap:anywhere}
   .attach-btn,.send-btn{flex:none}
 }
+
+/* Final portrait polish */
+button{font-family:inherit;color:var(--ink)}
+a,a:visited{color:var(--ink);text-decoration:none}
+.quick strong,.quick b,.quick{color:var(--ink)}
+.studio-tabs{flex-wrap:wrap;overflow:hidden;min-width:0}
+.studio-tabs button{flex:1 1 120px;white-space:normal;min-width:0;text-align:center;line-height:1.2}
+.sticky-summary{z-index:10}
+@media(max-width:620px){
+ .studio-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .studio-tabs button{width:100%;padding:10px 6px;font-size:12px}
+ .sticky-summary{position:relative;bottom:auto;margin-top:18px;margin-bottom:18px}
+ .service-rule-strip{margin-bottom:20px}
+}
