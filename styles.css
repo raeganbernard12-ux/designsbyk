@@ -105,3 +105,44 @@ a,a:visited{color:var(--ink);text-decoration:none}
 .estimate-time{padding-left:14px;border-left:1px solid #d8b98f}.estimate-time strong{font-size:18px}@media(max-width:620px){.sticky-summary{gap:10px;align-items:center}.sticky-summary>span{min-width:0}.sticky-summary .estimate-time{padding-left:10px}.estimate-time strong{font-size:15px}.sticky-summary .btn{white-space:nowrap;padding:10px 12px}}
 
 .service-admin-row[draggable="true"]{cursor:grab}.service-admin-row.is-dragging{opacity:.45;border-style:dashed}.service-admin-row[draggable="true"]:active{cursor:grabbing}
+
+
+/* Appointment manager and invoices */
+.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.admin-summary-grid .quick{min-height:132px;text-align:left}
+.appointment-filters{display:flex;gap:10px;overflow-x:auto;padding:4px 0 18px;scrollbar-width:thin}
+.appointment-filters button{border:1px solid var(--line);background:#fff8ec;color:var(--ink);border-radius:999px;padding:11px 17px;font:inherit;font-weight:800;white-space:nowrap;cursor:pointer}
+.appointment-filters button.active{background:var(--brown);border-color:var(--brown);color:#fff3dd}
+.appointment-admin-list,.invoice-list{display:grid;gap:18px}
+.admin-appointment-card{padding:18px;overflow:hidden}
+.admin-appointment-card .booking-card{border:0;box-shadow:none;padding:0;background:transparent}
+.appointment-money{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0}
+.appointment-money span{display:flex;flex-direction:column;gap:4px;background:#fff7e8;border:1px solid var(--line);border-radius:16px;padding:12px}
+.appointment-money small,.invoice-top small,.invoice-summary small{color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.receipt-preview{display:flex;align-items:center;gap:14px;width:max-content;max-width:100%;color:var(--ink);font-weight:800;text-decoration:none;background:#fff7e8;border:1px solid var(--line);border-radius:18px;padding:10px 14px}
+.receipt-preview img{width:72px;height:72px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+.deposit-waiting{background:#fbf0dc;border:1px dashed var(--line);border-radius:15px;padding:13px;color:var(--muted);font-weight:700}
+.appointment-actions{margin-top:16px;flex-wrap:wrap}
+.invoice-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0 24px}
+.invoice-summary>div{display:flex;flex-direction:column;gap:8px;background:linear-gradient(145deg,#fff9ed,#f5dfbd);border:1px solid var(--line);border-radius:22px;padding:18px}
+.invoice-summary strong{font-family:var(--display);font-size:clamp(1.45rem,3vw,2.2rem);color:var(--brown)}
+.invoice-card{padding:20px}
+.invoice-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.invoice-top h3{margin:4px 0}
+.invoice-top span:not(.status){color:var(--muted)}
+.invoice-services{margin:18px 0;padding:12px 0;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+.invoice-services>div,.invoice-totals>div{display:flex;justify-content:space-between;gap:16px;padding:7px 0}
+.invoice-totals .paid{color:#49634f}
+.invoice-totals .balance{border-top:2px solid var(--brown);margin-top:5px;padding-top:12px;font-size:1.12rem}
+.invoice-date{display:block;margin-top:14px;color:var(--muted)}
+.cancel-alert{border-color:#b85d4b!important;color:#8d3025!important}
+@media(max-width:760px){
+  .grid.four,.admin-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .appointment-money,.invoice-summary{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .appointment-actions .btn{width:100%}
+}
+@media(max-width:430px){
+  .appointment-money,.invoice-summary{grid-template-columns:1fr}
+  .invoice-top{flex-direction:column}
+  .receipt-preview{width:100%}
+}
