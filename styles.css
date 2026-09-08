@@ -44,3 +44,7 @@
 
 /* Private backup centre */
 .backup-panel{max-width:760px;margin:auto}.backup-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(145deg,#3d2119,#744028);border:2px solid #d89a61;font-size:25px;box-shadow:0 7px 16px #3c1d1633}.backup-list{display:grid;gap:10px}.backup-row{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#fffaf0,#f4e2c9)}.backup-row-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:#5e3022;font-size:20px}.backup-row .grow{display:grid;gap:3px}.backup-row small{color:var(--sage)}@media(max-width:560px){.backup-row{align-items:flex-start;flex-wrap:wrap}.backup-row .grow{min-width:calc(100% - 58px)}.backup-row .btn{width:100%}}
+
+
+/* Service rules reminder */
+.service-rule-strip{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;margin:10px 0 16px;scrollbar-width:thin;scrollbar-color:#9a5a33 #f0dfc8}.service-rule-strip span{flex:0 0 auto;border:1px solid #d4b184;border-radius:999px;background:linear-gradient(145deg,#fff8e9,#f1ddc1);color:#51291e;padding:9px 13px;font-size:13px;font-weight:700}.service-option{touch-action:manipulation}.service-option:focus-visible{outline:3px solid #c57c3b;outline-offset:2px}
