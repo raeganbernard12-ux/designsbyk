@@ -1,1 +1,4 @@
 .policy-overlay{position:fixed;inset:0;z-index:2;background:#25130fcc;padding:18px;overflow:auto}
+
+.loyalty-card{background:linear-gradient(135deg,#4a271d,#6b3928);color:#fff;border:0;box-shadow:0 14px 28px rgba(61,31,22,.18)}
+.loyalty-card .eyebrow,.loyalty-card .muted{color:#f2dfc5}.loyalty-progress{height:10px;background:#8b5a43;border-radius:999px;overflow:hidden;margin-top:16px}.loyalty-progress span{display:block;height:100%;background:#e7ad68;border-radius:inherit;transition:width .3s ease}
