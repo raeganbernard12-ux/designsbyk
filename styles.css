@@ -159,3 +159,60 @@ a,a:visited{color:var(--ink);text-decoration:none}
   .admin-head-actions{width:100%;justify-content:stretch}
   .admin-head-actions .btn{flex:1}
 }
+
+
+/* Mobile admin header and appointment filters: keep every label readable. */
+@media(max-width:620px){
+  .section-head:has(.admin-head-actions){
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    align-items:start;
+    gap:14px;
+  }
+  .section-head:has(.admin-head-actions) .page-title{
+    font-size:clamp(44px,14vw,58px);
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+  .admin-head-actions{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,.72fr);
+    width:100%;
+    gap:10px;
+    margin-top:0;
+  }
+  .admin-head-actions .btn{
+    width:100%;
+    max-width:none;
+    min-height:54px;
+    padding:11px 12px;
+    white-space:normal;
+    line-height:1.15;
+    text-align:center;
+  }
+  .appointment-filters{
+    display:flex;
+    width:100%;
+    max-width:100%;
+    gap:8px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:4px 2px 15px;
+    scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-inline:contain;
+  }
+  .appointment-filters button{
+    flex:0 0 auto;
+    width:auto;
+    min-width:max-content;
+    max-width:none;
+    padding:10px 15px;
+    line-height:1.2;
+    scroll-snap-align:start;
+  }
+  .admin-panel{
+    min-width:0;
+    overflow:hidden;
+  }
+}
