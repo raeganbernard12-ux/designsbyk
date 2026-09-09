@@ -40,10 +40,23 @@
       if(card.dataset.compactified==='1')return;
       const booking=adminData.bookings.find(b=>String(card.textContent||'').includes(String(b.reference||'')));
       if(!booking)return;
-      const original=card.innerHTML;
+
+      // IMPORTANT: move the existing DOM nodes instead of copying innerHTML.
+      // This preserves the click handlers already bound by app.js for
+      // Approve & request deposit, Decline, Edit, Cancel and Mark completed.
+      const existingNodes=[...card.childNodes];
+      const details=document.createElement('details');
+      details.className='dbk-compact-appointment';
+      const summary=document.createElement('summary');
+      summary.innerHTML=`<span class="dbk-compact-name">${escapeHtml(booking.full_name||'Client')}</span><span class="dbk-compact-service">${escapeHtml(serviceSummary(booking))}</span><span class="dbk-compact-datetime">${escapeHtml(dateTime(booking))}</span><span class="dbk-compact-chevron">⌄</span>`;
+      const body=document.createElement('div');
+      body.className='dbk-compact-details';
+      existingNodes.forEach(node=>body.appendChild(node));
+      details.append(summary,body);
+
       card.dataset.compactified='1';
       card.classList.add('dbk-compact-shell');
-      card.innerHTML=`<details class="dbk-compact-appointment"><summary><span class="dbk-compact-name">${escapeHtml(booking.full_name||'Client')}</span><span class="dbk-compact-service">${escapeHtml(serviceSummary(booking))}</span><span class="dbk-compact-datetime">${escapeHtml(dateTime(booking))}</span><span class="dbk-compact-chevron">⌄</span></summary><div class="dbk-compact-details">${original}</div></details>`;
+      card.replaceChildren(details);
     });
   }
 
