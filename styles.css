@@ -216,3 +216,9 @@ a,a:visited{color:var(--ink);text-decoration:none}
     overflow:hidden;
   }
 }
+
+
+/* Keep expanded appointment controls above the compact-card surface on touch screens. */
+.appointment-actions{position:relative;z-index:2}
+.appointment-actions .btn{touch-action:manipulation;-webkit-tap-highlight-color:transparent;pointer-events:auto}
+.dbk-compact-details{position:relative;z-index:1}
